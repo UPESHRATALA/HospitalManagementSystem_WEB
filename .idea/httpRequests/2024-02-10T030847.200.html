@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/Footer/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Footer/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/Footer/css/Article-List.css">
+    <link rel="stylesheet" href="/Footer/css/Footer-Dark.css">
+    <link rel="stylesheet" href="/Footer/css/styles.css">
+    <link rel="stylesheet" href="/nav-bar/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/nav-bar/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="/nav-bar/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="/nav-bar/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="/nav-bar/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="/nav-bar/css/styles.css">
+    <link rel="stylesheet" href="/nav-bar/css/Team-Boxed.css">
+    <title>Save medicine</title>
+</head>
+
+<body>
+
+<div>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+            <div class="container">
+                <a class="navbar-brand" href="/Home/home-page">Patient Managment System</a>
+                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                     id="navcol-1">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="/patients/list">Patients</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="/doctors/list">Doctors</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="/diseases/list">Diseases</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="/medicines/list">Medicines</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="/Home/contact-US">Contact US</a>
+                        </li>
+                        <!--                        <li class="dropdown">-->
+                        <!--                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Page 1-->
+                        <!--                                <span class="caret"></span></a>-->
+                        <!--                            <ul class="dropdown-menu" role="menu">-->
+                        <!--                                <li><a class="dropdown-item" role="presentation" href="#">Page 1-1</a></li>-->
+                        <!--                                <li><a class="dropdown-item" role="presentation" href="#">Page 1-2</a></li>-->
+                        <!--                                <li><a class="dropdown-item" role="presentation" href="#">Page 1-3</a></li>-->
+                        <!--                                <li><a class="dropdown-item" role="presentation" href="#">Page 1-1</a></li>-->
+                        <!--                                <li><a class="dropdown-item" role="presentation" href="#">Page 1-2</a></li>-->
+                        <!--                                <li><a class="dropdown-item" role="presentation" href="#">Page 1-3</a></li>-->
+                        <!--                            </ul>-->
+                        <!--                        </li>-->
+                        <li class="dropdown nav-item">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown"
+                               aria-expanded="true">Download </a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" onclick="clickDownload()">Patient
+                                    Reports</a>
+                                <a class="dropdown-item" role="presentation" onclick="clickDownload()">Doctor
+                                    Reports</a>
+                                <a class="dropdown-item" role="presentation" onclick="clickDownload()">Medicines
+                                    reports</a>
+                                <!--                                <a class="dropdown-item" role="presentation" th:href="@{/reports/medicine-report}">Medicines reports</a>-->
+                            </div>
+                        </li>
+                    </ul>
+                    <span class="navbar-text actions">
+                        <a class="login" href="/Home/login">Log In</a>
+                        <a class="btn btn-light action-button" role="button" href="/Home/signUP">Sign Up</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-group col-md-3"></div>
+    <div class="form-group col-md-6">
+
+        <div class="container">
+
+            <h3>medicine Directory</h3>
+            <br>
+
+            <p class="h4 mb-10">Save medicine</p>
+
+            <form action="/medicines/save" method="POST">
+
+                <!-- Add hidden form field to handle update -->
+                <input type="hidden" id="id" name="id" value="0"/>
+
+                <input type="text" class="form-control mb-4 col-10" placeholder="Medicine name" id="name" name="name"
+                       value="">
+
+                <input type="text" class="form-control mb-4 col-10" placeholder="Company name" id="companyName"
+                       name="companyName" value="">
+
+                <input type="date" class="form-control mb-4 col-10" placeholder="Manufacture Date" id="manufactureDate"
+                       name="manufactureDate" value="">
+
+                <input type="date" class="form-control mb-4 col-10" placeholder="Expiry Date" id="expiryDate"
+                       name="expiryDate" value="">
+
+                <input type="text" class="form-control mb-4 col-10" placeholder="Tablet, Capsole , ani-biotik" id="type"
+                       name="type" value="">
+
+                <button type="submit" class="btn btn-info col-4">Save</button>
+
+            </form>
+
+            <br>
+            <a href="/medicines/list">Back to Medicines List</a>
+
+        </div>
+
+    </div>
+    <div class="form-group col-md-3"></div>
+</div>
+
+<div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="/footer/api">API</a></li>
+                            <li><a href="/footer/pharmacy">Pharmacy</a></li>
+                            <li><a href="/footer/emergency">Emergency Care</a></li>
+                            <li><a href="/footer/nursing">Nursing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="/Home/home-page">Patient Management</a></li>
+                            <li><a href="/footer/team">Our Team</a></li>
+                            <li><a href="/footer/career">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Patient Management</h3>
+                        <p>Currently, hospitals are largely staffed by professional physicians, surgeons, nurses, and
+                            allied health practitioners, whereas in the past, this work was usually performed by the
+                            members of founding religious orders or by volunteers</p>
+                    </div>
+                    <div class="col item social">
+                        <a href="https://www.facebook.com/">
+                            <i class="icon ion-social-facebook"></i>
+                        </a>
+                        <a href="https://www.twitter.com/">
+                            <i class="icon ion-social-twitter"></i>
+                        </a>
+                        <a href="https://www.snapchat.com/">
+                            <i class="icon ion-social-snapchat"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="icon ion-social-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="copyright">Patient Management © 2017</p>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

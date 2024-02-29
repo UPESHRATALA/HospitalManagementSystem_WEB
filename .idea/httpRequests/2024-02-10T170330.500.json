@@ -1,0 +1,7 @@
+{
+  "timestamp": "2024-02-10T11:18:30.583+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Exception evaluating SpringEL expression: \"tempdoctor.disease.diseaseName\" (template: \"doctors/list-doctors\" - line 54, col 9)",
+  "path": "/doctors/list"
+}
